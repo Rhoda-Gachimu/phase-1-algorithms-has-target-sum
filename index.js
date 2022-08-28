@@ -1,5 +1,11 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i+1; j < array.length; j++) {
+      if (array[i] + array[j] === target) return true
+    }
+  }
+  return false
 }
 
 /* 
@@ -8,10 +14,14 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+   O(n^2)
 */
 
 /*
   Add written explanation of your solution here
+  Iterate through array. For each element, iterate through
+  the remaining elements and check if sum if equal to target.
+  Return true if sum is equal to target.
 */
 
 // You can run `node index.js` to view these console logs
